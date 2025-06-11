@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lugares Recomendados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="resultados.css" />
+</head>
+<body class="darkmode">
+  <a href="index.html" class="voltar-btn">&#8592; Voltar ao início</a>
+  <button id="alternar-modo">Alternar Tema</button>
+
+
+  <header>
+    <h1>LUGARES RECOMENDADOS <span>DIANTE DA SUA PESQUISA</span></h1>
+  </header>
+
+  <main id="cards-container">
+    <!-- Cards preenchidos pelo JS -->
+  </main>
+
+  <div class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-header">
+        <h2>Austrália</h2>
+      </div>
+
+      <div class="modal-carousel">
+        <img src="imagem1.jpg" alt="Austrália" />
+        <img src="imagem2.jpg" alt="Austrália" />
+      </div>
+
+      <div class="modal-section">
+        <h3>Informações Gerais</h3>
+        <p><strong>Localização:</strong> Oceania</p>
+        <p><strong>Hemisfério:</strong> Sul</p>
+        <p><strong>Clima:</strong> Temperado</p>
+        <p><strong>Custo de vida:</strong> $1500</p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Por que recomendamos:</h3>
+        <ul>
+          ${dados.motivo.split('. ').filter(Boolean).map(item => `<li>${item.trim().replace(/\.$/, '')}.</li>`).join('')}
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <h3>Cidades recomendadas</h3>
+        <ul>
+          <li>Sydney</li>
+          <li>Melbourne</li>
+          <li>Gold Coast</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <h3>Explore no Mapa</h3>
+        <div class="modal-maps">[Mapa aqui]</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="resultados.js"></script>
+  <script src="resutado_modoclaro.js"></script>
+</body>
+</html>

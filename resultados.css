@@ -1,0 +1,290 @@
+body {
+    background-color: #0b1d0b;
+    color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+header span {
+    color: #b3e557;
+}
+
+#cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background-color: #1e3d1e;
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 22px;
+    color: #b3e557;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+.card strong {
+    color: #b3e557;
+}
+
+.card .visitas, .card .recomendado {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .slide.active {
+    display: block;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
+/* MODAL */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    opacity: 1; visibility: visible;
+}
+
+.modal-content {
+    background-color: #1a3324;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 900px;
+    width: 95%; max-height: 90vh;
+    overflow-y: auto; position: relative;
+    transform: scale(0.7);
+    transition: transform 0.4s ease;
+    color: #f5f5f5; font-family: 'Poppins', sans-serif;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute; top: 15px; right: 20px;
+    font-size: 28px; color: #b3e557;
+    cursor: pointer; transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #e2f7a0;
+}
+
+.modal-header {
+    display: flex; align-items: center; justify-content: space-between;
+}
+
+.modal-header h2 {
+    font-size: 28px; color: #b3e557; margin: 0;
+}
+
+.modal-carousel {
+    display: flex; gap: 10px; overflow-x: auto; margin: 15px 0;
+}
+
+.modal-carousel img {
+    width: 160px; height: 110px; object-fit: cover;
+    border-radius: 12px; flex-shrink: 0;
+}
+
+.modal-section {
+    margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #2e533c;
+}
+
+.modal-section h3 {
+    font-size: 22px; color: #b3e557; margin-bottom: 10px;
+}
+
+.modal-section p, .modal-section ul {
+    margin: 0; padding: 0;
+}
+
+.modal-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.modal-section ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.modal-maps-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+.modal-maps {
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+
+/* Botão Ver Mais */
+.ver-mais-btn {
+    background-color: #b3e557;
+    color: #0b1d0b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ver-mais-btn:hover {
+    background-color: #a0d444;
+    transform: translateY(-3px);
+}
+
+/* Responsivo para o modal */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 20px;
+    }
+
+    .modal-carousel img {
+        width: 120px; height: 80px;
+    }
+
+    .modal-header h2 {
+        font-size: 22px;
+    }
+
+    .modal-section h3 {
+        font-size: 18px;
+    }
+}
+
+        .voltar-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            z-index: 999;
+            transition: background-color 0.3s;
+        }
+
+        .voltar-btn:hover {
+            background-color: #555;
+        }
+
+
+#alternar-modo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #b3e557;
+  color: #0b1d0b;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 999;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#alternar-modo:hover {
+  background-color: #a0d444;
+  transform: translateY(-2px);
+}

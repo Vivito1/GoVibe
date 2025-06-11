@@ -1,0 +1,1037 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+.govibe h1, .govibe h2, .govibe h3 {
+  font-weight: 600;
+}
+
+.govibe .section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.govibe .section-title span {
+  color: hsl(84, 50%, 58%);
+}
+
+.govibe .btn {
+  background-color: #386b2f;
+  color: #ffffff;
+  padding: 0.75rem 1.8rem;
+  border-radius: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.govibe .btn:hover {
+  background-color: hsl(84, 50%, 58%);
+  transform: translateY(-2px);
+}
+/* Header */
+.govibe .topo{
+  background-color: #11240d;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo span {
+  color: #97de2c;
+}
+
+.govibe .topo .topo nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.govibe .topo .topo .btn {
+  background: transparent;
+  border: 1px solid #11240d;
+  color: hwb(78 18% 48%);
+}
+
+.govibe .topo .topo .btn.active,
+.govibe .topo .topo .btn:hover {
+  background-color: hsl(84, 50%, 58%);
+  color: #000;
+}
+
+.icons img {
+  width: 24px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* Hero */  
+.govibe .hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('img/nature.png') no-repeat center center/cover;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.govibe .hero .hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.govibe .hero .hero h1 span {
+  color: hsl(84, 50%, 58%);
+}
+
+.govibe .hero .hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* Grid e Cards */
+.govibe .grid-2, .grid-3 {
+  display: grid;
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.govibe .grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(153, 212, 35, 0.829);
+  cursor: pointer;
+}
+
+.card h3 {
+  color: hsl(84, 50%, 58%);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+/* Listas de Benefícios */
+.benefit-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-size: 1rem;
+}
+
+.benefit-list li {
+  background: #1b1b1b;
+  padding: 1rem;
+  border-left: 5px solid hsl(84, 50%, 58%);
+  border-radius: 8px;
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.benefit-list li strong {
+  color: #fff;
+}
+
+/* CTA */
+.cta {
+  background-color: #11240d;
+  color: #000;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Espaçamento entre seções */
+.section {
+  margin-top: 5rem;
+}
+
+.cta{
+  margin-top: 4rem;
+}
+.govibe .topo .topo button{
+  cursor: pointer;
+}
+.cta{
+  
+}
+
+.step-form .step {
+      display: none;
+      animation: fade 0.5s ease-in-out;
+      padding: 2.5rem;
+      max-width: 700px;
+      margin: 2rem auto;
+      background: linear-gradient(135deg, #1e1e1e, #252525);
+      border: 1px solid #2c2c2c;
+      border-radius: 24px;
+      box-shadow: 0 0 25px rgba(164, 230, 29, 0.08);
+      position: relative;
+    }
+
+    .step-form .step.active {
+      display: block;
+    }
+
+    .step label {
+      display: block;
+      margin: 0.8rem 0;
+      cursor: pointer;
+      background-color: #181818;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .step label:hover {
+      background-color: #222;
+    }
+
+    .step input[type="radio"],
+    .step input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.1);
+    }
+
+    .step h3 {
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+      color: hsl(84, 50%, 58%);
+      text-align: center;
+    }
+
+    .step-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+
+    .error-message {
+      color: #ff4d4d;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      display: none;
+      text-align: center;
+    }
+
+    .step.shake {
+      animation: shake 0.4s;
+    }
+
+    .progress-bar-container {
+      width: 100%;
+      height: 10px;
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1rem auto 2rem;
+      max-width: 700px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+  background: linear-gradient(to right, #a4e61d, #89cf00);
+  transition: width 0.4s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  @keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-6px); }
+}
+
+.step-buttons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
+  gap: 1rem;
+}
+
+
+
+.step-buttons .btn {
+  flex: 1;
+  max-width: 180px;
+  text-align: center;
+}
+
+.step-buttons .btn:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.feedback-section {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 60%;
+  margin: 4rem auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-align: center;
+ 
+  
+}
+
+.rating-stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 0.6rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.rating-stars span {
+  color: #444;
+  transition: 0.2s;
+}
+
+.rating-stars span.hover,
+.rating-stars span.selected {
+  color: #ffc107;
+}
+
+#feedbackForm textarea {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  resize: vertical;
+  font-size: 1rem;
+  background: #2a2a2a;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+#feedbackForm button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: #47883b;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#feedbackForm button:hover {
+  background: #9cc244;
+}
+
+.resposta-api {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+#feedbackForm input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-radius: 10px;
+  background-color: #2a2a2a;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+}
+
+.comentarios-lista {
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1.2rem;
+}
+
+.comentario {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+.comentario strong {
+  color: hsl(84, 50%, 58%);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #11240d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  gap: 10px;
+}
+
+.footer-item img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .govibe .hero .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .cta h2 {
+    font-size: 1.6rem;
+  }
+
+}
+.paginacao {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.paginacao .btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+  background-color: #2a2a2a;
+  color: hsl(84, 50%, 58%);
+  border: 1px solid #444;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.paginacao .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.avaliacao-geral {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.media-estrelas {
+  font-size: 1.5rem;
+  color: #ffc107;
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+#mediaTexto {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.subtitulo {
+  font-size: 1.5rem;
+  color: hsl(84, 50%, 58%);
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.divisor {
+  border: none;
+  border-top: 1px solid #2c2c2c;
+  margin: 2.5rem 0;
+  opacity: 0.3;
+}
+
+.avaliacao-geral {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.media-estrelas {
+  font-size: 1.8rem;
+  color: #ffc107;
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  margin: 0.5rem 0;
+}
+
+#mediaTexto {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.estrela-destaque {
+  font-size: 4rem;
+  background: linear-gradient(145deg, #ffd700, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 0.6rem;
+  animation: estrelaPulse 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px #ffbf00aa);
+}
+
+@keyframes estrelaPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px #ffbf00aa);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 12px #ffd966);
+  }
+}
+
+.rating-stars.focus-ativo span {
+  animation: focoEstrela 1.2s ease-in-out infinite;
+  color: #ffc107;
+  position: relative;
+}
+
+@keyframes focoEstrela {
+  0%, 100% {
+    text-shadow: 0 0 6px #ffc10755, 0 0 12px #ffc10722;
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 12px #ffc107cc, 0 0 20px #ffc10788;
+    transform: scale(1.15);
+  }
+}
+.rating-stars {
+  backdrop-filter: brightness(1.1);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: hsl(84, 50%, 58%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-desktop {
+    display: none;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    background-color: #11240d;
+    padding: 1rem;
+    margin-top: 10px;
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .menu-desktop.active {
+    display: flex;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+.govibe-carousel-title {
+  font-size: 2rem;
+  color: hsl(84, 50%, 58%);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.govibe .topo .topo nav .btn.active {
+  background-color: hsl(84, 50%, 58%);
+  color: #000;
+}
+
+#govibe-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#govibe-modal-content {
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+.govibe-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#govibe-modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+#govibe-map iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.govibe-info-boxes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.govibe-info-box {
+  background-color: #2b2b2b;
+  border-radius: 12px;
+  padding: 10px;
+  flex: 1 1 calc(50% - 10px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.govibe-info-box i {
+  font-size: 18px;
+  color: #c4f500;
+}
+
+.govibe-info-box p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.govibe-description {
+  background-color: #2b2b2b;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+@media (max-width: 500px) {
+  .govibe-info-boxes {
+    flex-direction: column;
+  }
+}
+
+#g-1, #g-2, #g-3{
+  display: none;
+}
+
+#btnProximo{
+  cursor: pointer;
+}
+
+.govibe-carousel-section {
+  padding: 2rem;
+  background-color: #121212;
+  text-align: center;
+}
+
+.govibe-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.govibe-carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.govibe-carousel-slide {
+  flex: 0 0 33.3333%; /* Mostrar 3 por vez */
+  margin: 0 0.5rem;
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: transform 0.5s, opacity 0.5s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.govibe-carousel-slide.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.govibe-carousel-slide img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Faixa semitransparente na parte inferior da imagem */
+.govibe-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.govibe-saiba-mais {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.govibe-saiba-mais:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+}
+
+.govibe-overlay h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #a4e61d;
+}
+
+/* Botões das setas */
+.govibe-carousel-controls {
+  margin-top: 1rem;
+}
+
+.govibe-prev, .govibe-next {
+  background-color: #386b2f;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0 0.3rem;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.govibe-prev:hover, .govibe-next:hover {
+  background-color: hwb(93 12% 27%);
+  transform: scale(1.1);
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .govibe-carousel-slide {
+    flex: 0 0 80%;
+  }
+}
+ 
+.govibe-slider {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+
+.govibe-testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  perspective: 1000px;
+  height: 250px;
+}
+
+.govibe-item {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  background: #1b1b1b;
+  color: #d1d1d1;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  opacity: 0.3;
+  transition: all 0.5s ease;
+  transform: translateX(0) scale(0.8);
+}
+
+.govibe-item h3 {
+  color: #a4e61d;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.govibe-item p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.govibe-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.govibe-dots label {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.govibe-dots label:hover {
+  background-color: #a4e61d;
+  transform: scale(1.2);
+}
+
+/* Posicionamento dos cards */
+#g-1:checked ~ .govibe-testimonials label[for="g-1"] {
+  opacity: 1;
+  z-index: 3;
+  transform: translateX(0) scale(1);
+}
+#g-1:checked ~ .govibe-testimonials label[for="g-2"] {
+  transform: translateX(330px) scale(0.8);
+  opacity: 0.5;
+  z-index: 2;
+}
+#g-1:checked ~ .govibe-testimonials label[for="g-3"] {
+  transform: translateX(-330px) scale(0.8);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+#g-2:checked ~ .govibe-testimonials label[for="g-2"] {
+  opacity: 1;
+  z-index: 3;
+  transform: translateX(0) scale(1);
+}
+#g-2:checked ~ .govibe-testimonials label[for="g-1"] {
+  transform: translateX(-330px) scale(0.8);
+  opacity: 0.5;
+  z-index: 2;
+}
+#g-2:checked ~ .govibe-testimonials label[for="g-3"] {
+  transform: translateX(330px) scale(0.8);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+#g-3:checked ~ .govibe-testimonials label[for="g-3"] {
+  opacity: 1;
+  z-index: 3;
+  transform: translateX(0) scale(1);
+}
+#g-3:checked ~ .govibe-testimonials label[for="g-1"] {
+  transform: translateX(330px) scale(0.8);
+  opacity: 0.5;
+  z-index: 2;
+}
+#g-3:checked ~ .govibe-testimonials label[for="g-2"] {
+  transform: translateX(-330px) scale(0.8);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+/* Destacar o botão ativo */
+#g-1:checked ~ .govibe-dots label[for="g-1"],
+#g-2:checked ~ .govibe-dots label[for="g-2"],
+#g-3:checked ~ .govibe-dots label[for="g-3"] {
+  background-color: #a4e61d;
+}
+
+
+
+/* Estilos para modo escuro por padrão */
+#resultado,
+#resultadoIA {
+  color: #fff;
+  background-color: #121212; /* opcional: fundo escuro */
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.cta {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.cta .btn {
+  background-color: hsl(84, 50%, 48%);
+  color: #fff;
+}
+
+ 
+/* RESPONSIVO - Seção Sobre a GoVibe (Slider) */
+@media (max-width: 768px) {
+  .govibe-slider {
+    padding: 1.5rem 1rem;
+  }
+
+  .govibe-carousel-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .govibe-testimonials {
+    height: auto;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: static;
+    transform: none;
+  }
+
+  .govibe-item {
+    position: static;
+    width: 100%;
+    max-width: 90%;
+    transform: none !important;
+    opacity: 1 !important;
+    z-index: auto !important;
+    scale: 1 !important;
+  }
+
+  #g-1:checked ~ .govibe-testimonials label[for],
+  #g-2:checked ~ .govibe-testimonials label[for],
+  #g-3:checked ~ .govibe-testimonials label[for] {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .govibe-dots {
+    margin-top: 1rem;
+  }
+}
+
+/* RESPONSIVO - Botões do Carrossel */
+@media (max-width: 768px) {
+  .govibe-carousel-slide {
+    flex: 0 0 90%;
+    margin: 0 0.25rem;
+  }
+
+  .govibe-carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .govibe-prev,
+  .govibe-next {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+}

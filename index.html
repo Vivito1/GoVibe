@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoVibe</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="slides.css">
+</head>
+<body class="darkmode">
+  <div class="govibe">
+<header class="topo">
+  <div class="logo">Go<span>Vibe</span></div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav class="menu-desktop" id="menu">
+    <button data-translate="nav-home" class="btn active" onclick="scrollToSection('home')">Início</button>
+    <button data-translate="nav-about" class="btn" onclick="scrollToSection('about')">Sobre</button>
+    <button data-translate="nav-services" class="btn" onclick="scrollToSection('servicos')">Soluções</button>
+    <button data-translate="nav-form" class="btn" onclick="scrollToSection('form')">Pesquisa</button>
+  </nav>
+
+  <div class="icons">
+    <img src="img/idioma.png" alt="Idioma" onclick="toggleLanguage()" style="cursor:pointer;" />
+    <img src="img/ligthmode.png" alt="Modo noturno" id="btnLightMode" onclick="aplicarLightMode()">
+   
+
+  </div>
+</header>
+
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1 data-translate="hero-title"><span id="transforme">Transforme</span> suas viagens com inteligência</h1>
+    <p data-translate="hero-subtitle">Encontre destinos ideais com base em suas preferências, orçamento e estilo de vida.</p>
+    <a href="#form" class="btn" data-translate="hero-cta">Descubra agora</a>
+  </div>
+</section>
+
+
+
+<!-- Carrossel já existente -->
+<section class="govibe-carousel-section">
+  <h2 class="govibe-carousel-title" data-translate="carousel-title">🌍 Explore Destinos Incríveis 🌍</h2>
+  <div class="govibe-carousel">
+    <ul class="govibe-carousel-wrapper">
+      <li class="govibe-carousel-slide">
+        <img src="img/brasil.png" alt="Brasil">
+        <div class="govibe-overlay">
+          <h3 data-translate="pais-brasil">Brasil</h3>
+        </div>
+      </li>
+      <li class="govibe-carousel-slide">
+        <img src="img/franca.png" alt="França">
+        <div class="govibe-overlay">
+          <h3 data-translate="pais-franca">França</h3>
+        </div>
+      </li>
+      <li class="govibe-carousel-slide">
+        <img src="img/japao.png" alt="Japão">
+        <div class="govibe-overlay">
+          <h3 data-translate="pais-japao">Japão</h3>
+        </div>
+      </li>
+      <li class="govibe-carousel-slide">
+        <img src="img/italia.png" alt="Itália">
+        <div class="govibe-overlay">
+          <h3 data-translate="pais-italia">Itália</h3>
+        </div>
+      </li>
+      <li class="govibe-carousel-slide">
+        <img src="img/canada.png" alt="Canadá">
+        <div class="govibe-overlay">
+          <h3 data-translate="pais-canada">Canadá</h3>
+        </div>
+      </li>
+    </ul>
+    <div class="govibe-carousel-controls">
+      <button class="govibe-prev">←</button>
+      <button class="govibe-next">→</button>
+    </div>
+  </div>
+</section>
+</section>
+
+<div class="govibe-slider" id="about">
+    <h2 class="govibe-carousel-title" data-translate="govibe-sobre"> Sobre a <span>GoVibe</span> </h2>
+  <input type="radio" name="govibe-carousel" id="g-1" />
+  <input type="radio" name="govibe-carousel" id="g-2" checked />
+  <input type="radio" name="govibe-carousel" id="g-3" />
+
+  <div class="govibe-testimonials">
+    <label class="govibe-item" for="g-1">
+      <div class="govibe-card">
+        <h3 data-translate="testimonial-title-1">O que somos</h3>
+        <p data-translate="testimonial-text-1">
+          Na GoVibe, somos apaixonados por transformar viagens em memórias inesquecíveis. Plataforma feita para explorar com autenticidade, fugir do óbvio e viver cada destino com intensidade. Somos uma comunidade que conecta viajantes a experiências únicas, com curadoria especializada e tecnologia inteligente.
+        </p>
+      </div>
+    </label>
+
+    <label class="govibe-item" for="g-2">
+      <div class="govibe-card">
+        <h3 data-translate="testimonial-title-2">Como funciona</h3>
+        <p data-translate="testimonial-text-2">
+          Explore destinos incríveis com base no seu estilo de viagem. Personalize usando filtros inteligentes para descobrir roteiros sob medida. Veja avaliações reais e crie seu itinerário. Compartilhe suas experiências e inspire outros viajantes a explorar o mundo com a GoVibe.
+        </p>
+      </div>
+    </label>
+
+    <label class="govibe-item" for="g-3">
+      <div class="govibe-card">
+        <h3 data-translate="testimonial-title-3">Por que confiar</h3>
+        <p data-translate="testimonial-text-3">
+          Confiança se constrói com verdade e experiências reais. Nossas dicas vêm de viajantes autênticos e tecnologia de curadoria inteligente para mostrar o que realmente vale a pena. Conteúdo transparente, atualizado e inspirador, feito para você planejar com confiança e curtir sem preocupação.
+        </p>
+      </div>
+    </label>
+  </div>
+</div>
+
+<section class="benefits">
+  <h2 class="section-title" data-translate="benefits-title">Vantagens do <span>GoVibe</span></h2>
+  <div class="grid-2">
+    <ul class="benefit-list">
+      <li data-translate="benefit-1">🔍 <strong>Recomendação personalizada:</strong> IA que aprende com você</li>
+      <li data-translate="benefit-2">📍 <strong>Destinos sob medida:</strong> conforme perfil e localização</li>
+      <li data-translate="benefit-idioma">🌎 <strong>Suporte multilíngue:</strong> alterne o idioma do site com 1 clique</li>
+    </ul>
+    <ul class="benefit-list">
+      <li data-translate="benefit-4">📊 <strong>Planejamento inteligente:</strong> foco no seu orçamento</li>
+      <li data-translate="benefit-5">🌐 <strong>Modo claro/escuro:</strong> conforme preferência do usuário</li>
+      <li data-translate="benefit-6">🛏️ <strong>Experiência mobile-first:</strong> rápida e intuitiva</li>
+    </ul>
+  </div>
+</section>
+
+<section id="servicos" class="servicos">
+  <h2 class="section-title" data-translate="services-title"><span>Soluções</span> GoVibe</h2>
+  <div class="grid-3">
+    <div class="card">
+      <h3 data-translate="service-1-title">IA de Recomendacão</h3>
+      <p data-translate="service-1-desc">Algoritmos que interpretam seus gostos, clima desejado e valores para sugerir destinos com base real.</p>
+    </div>
+    <div class="card">
+      <h3 data-translate="service-2-title">Informações de Países</h3>
+      <p data-translate="service-2-desc">Exibimos dados completos sobre cada país: clima, moeda, idioma, cidades principais e muito mais.</p>
+    </div>
+    <div class="card">
+      <h3 data-translate="service-3-title">Mapeamento de Distância</h3>
+      <p data-translate="service-3-desc">Medimos a distância da sua localização ao destino com sugestões de transporte e duração.</p>
+    </div>
+  </div>
+</section>
+
+ <section class="cta">
+  <div class="cta-content" style="color: white;">
+    <h2 data-translate="cta-title">Pronto para encontrar sua próxima viagem?</h2>
+    <p data-translate="cta-text">Planeje com dados reais e escolhas inteligentes.</p>
+    <a href="#form" class="btn" style="color: rgb(0, 0, 0); background-color: hsl(84, 50%, 58%);" data-translate="cta-btn">Quero experimentar</a>
+  </div>
+</section>
+
+<section id="form" class="formulario">
+  <h2 class="section-title" data-translate="quiz-title">Pesquisa Inteligente</h2>
+  <form id="quizForm" class="step-form">
+
+    <!-- 1. Orçamento -->
+    <div class="step active">
+      <h3 data-translate="pergunta-orcamento">Qual o seu orçamento total para essa viagem?</h3>
+      <label><input type="radio" name="orcamento" value="ate2000"><span data-translate="ate2000">Até R$2.000</span></label>
+      <label><input type="radio" name="orcamento" value="2000_5000"><span data-translate="2000_5000">De R$2.001 a R$5.000</span></label>
+      <label><input type="radio" name="orcamento" value="5000_10000"><span data-translate="5000_10000">De R$5.001 a R$10.000</span></label>
+      <label><input type="radio" name="orcamento" value="mais10000"><span data-translate="mais10000">Acima de R$10.000</span></label>
+    </div>
+
+    <!-- 2. Duração -->
+    <div class="step">
+      <h3 data-translate="pergunta-duracao">Quanto tempo você tem disponível para a viagem?</h3>
+      <label><input type="radio" name="duracao" value="curta"><span data-translate="curta">Final de semana (2 a 3 dias)</span></label>
+      <label><input type="radio" name="duracao" value="media"><span data-translate="media">De 4 a 7 dias</span></label>
+      <label><input type="radio" name="duracao" value="longa"><span data-translate="longa">De 8 a 15 dias</span></label>
+      <label><input type="radio" name="duracao" value="muito_longa"><span data-translate="muito_longa">Mais de 15 dias</span></label>
+    </div>
+
+    <!-- 3. Clima -->
+    <div class="step">
+      <h3 data-translate="pergunta-clima">Qual clima você prefere durante a viagem?</h3>
+      <label><input type="radio" name="clima" value="frio"><span data-translate="frio">Frio (com possibilidade de neve)</span></label>
+      <label><input type="radio" name="clima" value="ameno"><span data-translate="ameno">Ameno (primavera/outono)</span></label>
+      <label><input type="radio" name="clima" value="quente"><span data-translate="quente">Quente (verão intenso, tropical)</span></label>
+      <label><input type="radio" name="clima" value="arido"><span data-translate="arido">Árido ou desértico</span></label>
+    </div>
+
+    <!-- 4. Paisagem -->
+    <div class="step">
+      <h3 data-translate="pergunta-paisagem">Que tipo de paisagem mais te atrai?</h3>
+      <label><input type="radio" name="paisagem" value="montanha"><span data-translate="montanha">Montanhas e natureza selvagem</span></label>
+      <label><input type="radio" name="paisagem" value="praia"><span data-translate="praia">Praias e litoral</span></label>
+      <label><input type="radio" name="paisagem" value="historica"><span data-translate="historica">Cidades históricas e arquitetura antiga</span></label>
+      <label><input type="radio" name="paisagem" value="moderna"><span data-translate="moderna">Cidades modernas e urbanas</span></label>
+    </div>
+
+    <!-- 5. Estilo -->
+    <div class="step">
+      <h3 data-translate="pergunta-estilo">Qual o principal motivo da sua viagem?</h3>
+      <label><input type="radio" name="estilo" value="descanso"><span data-translate="descanso">Descanso e tranquilidade</span></label>
+      <label><input type="radio" name="estilo" value="cultura"><span data-translate="cultura">Cultura e história</span></label>
+      <label><input type="radio" name="estilo" value="aventura"><span data-translate="aventura">Aventura e natureza</span></label>
+      <label><input type="radio" name="estilo" value="gastronomia"><span data-translate="gastronomia">Gastronomia e experiências locais</span></label>
+    </div>
+
+    <!-- 6. Idioma -->
+    <div class="step">
+      <h3 data-translate="pergunta-idioma">Você se importa com o idioma falado no país?</h3>
+      <label><input type="radio" name="idioma" value="portugues"><span data-translate="portugues">Prefiro que falem português</span></label>
+      <label><input type="radio" name="idioma" value="ingles"><span data-translate="ingles">Me viro com inglês</span></label>
+      <label><input type="radio" name="idioma" value="espanhol"><span data-translate="espanhol">Posso lidar com espanhol</span></label>
+      <label><input type="radio" name="idioma" value="qualquer"><span data-translate="qualquer">Não me importo com o idioma</span></label>
+    </div>
+
+    <!-- 7. Região -->
+    <div class="step">
+      <h3 data-translate="pergunta-regiao">Qual dessas regiões do mundo você gostaria mais de conhecer?</h3>
+      <label><input type="radio" name="regiao" value="america"><span data-translate="america">América (Norte, Central ou Sul)</span></label>
+      <label><input type="radio" name="regiao" value="europa"><span data-translate="europa">Europa</span></label>
+      <label><input type="radio" name="regiao" value="asia"><span data-translate="asia">Ásia</span></label>
+      <label><input type="radio" name="regiao" value="africa_oceania"><span data-translate="africa_oceania">África ou Oceania</span></label>
+    </div>
+
+    <!-- 8. Cultura local -->
+    <div class="step">
+      <h3 data-translate="pergunta-cultura-local">Você quer um país com:</h3>
+      <label><input type="radio" name="cultura_local" value="parecida"><span data-translate="parecida">Costumes semelhantes ao Brasil</span></label>
+      <label><input type="radio" name="cultura_local" value="diferente"><span data-translate="diferente">Uma cultura bem diferente da sua</span></label>
+      <label><input type="radio" name="cultura_local" value="forte"><span data-translate="forte">Tradições fortes e únicas</span></label>
+      <label><input type="radio" name="cultura_local" value="misturada"><span data-translate="misturada">Mistura de culturas e estilos</span></label>
+    </div>
+
+    <!-- 9. Interesse cultural -->
+    <div class="step">
+      <h3 data-translate="pergunta-interesse-cultural">Qual o seu nível de interesse por atividades culturais?</h3>
+      <label><input type="radio" name="interesse_cultura" value="alto"><span data-translate="interesse-alto">Muito alto</span></label>
+      <label><input type="radio" name="interesse_cultura" value="medio"><span data-translate="interesse-medio">Moderado</span></label>
+      <label><input type="radio" name="interesse_cultura" value="baixo"><span data-translate="interesse-baixo">Baixo</span></label>
+      <label><input type="radio" name="interesse_cultura" value="nenhum"><span data-translate="interesse-nenhum">Nenhum</span></label>
+    </div>
+
+    <!-- 10. Turismo -->
+    <div class="step">
+      <h3 data-translate="pergunta-fama">Você gostaria de visitar um país:</h3>
+      <label><input type="radio" name="fama_pais" value="famoso"><span data-translate="famoso">Muito turístico e famoso</span></label>
+      <label><input type="radio" name="fama_pais" value="diferente"><span data-translate="diferente">Menos conhecido, fora do comum</span></label>
+      <label><input type="radio" name="fama_pais" value="equilibrado"><span data-translate="equilibrado">Com equilíbrio entre os dois</span></label>
+      <label><input type="radio" name="fama_pais" value="tanto_faz"><span data-translate="tanto_faz">Tanto faz</span></label>
+    </div>
+
+    <!-- 11. Culinária -->
+    <div class="step">
+      <h3 data-translate="pergunta-comida">Em relação à comida, você prefere:</h3>
+      <label><input type="radio" name="comida" value="exotica"><span data-translate="exotica">Cozinha exótica e nova</span></label>
+      <label><input type="radio" name="comida" value="familiar"><span data-translate="familiar">Algo mais próximo da culinária brasileira</span></label>
+      <label><input type="radio" name="comida" value="variada"><span data-translate="variada">Mistura de culinárias</span></label>
+      <label><input type="radio" name="comida" value="indiferente"><span data-translate="indiferente">Não me importo com isso</span></label>
+    </div>
+
+    <!-- 12. Liberdade -->
+    <div class="step">
+      <h3 data-translate="pergunta-liberdade">Que tipo de liberdade você valoriza ao viajar?</h3>
+      <label><input type="radio" name="liberdade" value="aberta"><span data-translate="aberta">Países com leis flexíveis e abertos</span></label>
+      <label><input type="radio" name="liberdade" value="regras"><span data-translate="regras">Países organizados com regras claras</span></label>
+      <label><input type="radio" name="liberdade" value="visual"><span data-translate="visual">Me preocupo mais com beleza do lugar</span></label>
+      <label><input type="radio" name="liberdade" value="evitar"><span data-translate="evitar">Quero evitar países muito conservadores</span></label>
+    </div>
+
+    <!-- 13. Companhia -->
+    <div class="step">
+      <h3 data-translate="pergunta-companhia">Com quem você vai viajar?</h3>
+      <label><input type="radio" name="companhia" value="sozinho"><span data-translate="sozinho">Sozinho(a)</span></label>
+      <label><input type="radio" name="companhia" value="casal"><span data-translate="casal">Em casal</span></label>
+      <label><input type="radio" name="companhia" value="familia"><span data-translate="familia">Com família</span></label>
+      <label><input type="radio" name="companhia" value="amigos"><span data-translate="amigos">Com amigos</span></label>
+    </div>
+
+    <!-- Botões -->
+    <div class="step-buttons">
+      <button type="button" id="prevStep" class="btn" data-translate="btn-voltar">← Voltar</button>
+      <button type="button" id="nextStep" class="btn" data-translate="btn-proximo">Próximo →</button>
+      <button type="submit" id="submitForm" class="btn" style="display: none;" data-translate="btn-enviar">✓ Enviar</button>
+    </div>
+
+  </form>
+</section>
+
+
+<div id="resultado"></div>
+<div id="resultadoIA"></div>
+<section class="cta">
+  <div class="cta-content" style="color: white;">
+    <h2 data-translate="cta-evaluate-title">Pronto para avaliar✈️</h2>
+    <p data-translate="cta-evaluate-text">Avalie o nosso site de acordo com a sua experiência!</p>
+    <a class="btn" style="color: rgb(0, 0, 0); background-color: hsl(84, 50%, 58%);" data-translate="cta-evaluate-btn">Avalie já</a>
+  </div>
+</section>
+
+<section id="feedback" class="feedback-section">
+  <h2 class="section-title" data-translate="feedback-title">Avaliação geral do <span>site</span></h2>
+
+  <div class="avaliacao-geral" id="avaliacaoGeral">
+    <div class="estrela-destaque">★</div>
+    <div class="media-estrelas" id="mediaEstrelas"></div>
+    <p id="mediaTexto" data-translate="feedback-base">Baseado em 0 avaliações</p>
+  </div>
+
+  <h3 class="subtitulo" data-translate="feedback-subtitle">Envie seu feedback</h3>
+
+  <div class="rating-stars" id="ratingStars">
+    <span data-value="1">★</span>
+    <span data-value="2">★</span>
+    <span data-value="3">★</span>
+    <span data-value="4">★</span>
+    <span data-value="5">★</span>
+  </div>
+
+  <form id="feedbackForm">
+    <input type="text" name="nome" id="nome" placeholder="Seu nome (opcional)" data-translate="feedback-name-placeholder">
+    <textarea name="comentario" id="comentario" rows="4" placeholder="Escreva seu comentário..." required data-translate="feedback-placeholder"></textarea>
+    <button type="submit" id="enviarBtn" data-translate="feedback-submit">Enviar</button>
+  </form>
+
+  <p class="resposta-api" id="respostaAPI" data-translate="feedback-default"></p>
+
+  <hr class="divisor">
+
+  <div id="comentarios" class="comentarios-lista"></div>
+  <div id="paginacaoComentarios" class="paginacao">
+    <button id="btnAnterior" class="btn" disabled data-translate="pagination-prev">← Anterior</button>
+    <button id="btnProximo" class="btn" data-translate="pagination-next">Próximo →</button>
+  </div>
+</section>
+
+
+
+
+<div id="govibe-modal">
+  <div id="govibe-modal-content">
+    <button class="govibe-close">&times;</button>
+    <h2 id="govibe-modal-title" data-translate="modal-title">Explore o destino</h2>
+    <div id="govibe-map"></div>
+    <div class="govibe-info-boxes">
+      <div class="govibe-info-box">
+        <i>💰</i><p id="govibe-moeda" data-translate="modal-currency">Moeda</p>
+      </div>
+      <div class="govibe-info-box">
+        <i>🌤️</i><p id="govibe-clima" data-translate="modal-climate">Clima atual</p>
+      </div>
+      <div class="govibe-info-box">
+        <i>📅</i><p id="govibe-estacao" data-translate="modal-season">Melhor época</p>
+      </div>
+      <div class="govibe-info-box">
+        <i>⏰</i><p id="govibe-fuso" data-translate="modal-timezone">Fuso horário</p>
+      </div>
+    </div>
+    <div id="govibe-description" class="govibe-description" data-translate="modal-description">Descrição do país</div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-item">
+    <img src="./img/insta 1.png" alt="Instagram" />
+    <span data-translate="footer-insta">@GoVibess</span>
+  </div>
+  <div class="footer-item">
+    <img src="img/whats.png" alt="Telefone" />
+    <span data-translate="footer-phone">31 94002-8922</span>
+  </div>
+  <div class="footer-item">
+    <img src="./img/email.png" alt="Email" />
+    <span data-translate="footer-email">GoVibe@gmail.com</span>
+  </div>
+  <p class="copy" data-translate="footer-copy">© 2025 GoVibe. Todos os direitos reservados.</p>
+</footer>
+
+  <script src="traducao.js"></script>
+  <script src="govibe_ia.js"></script>
+  <script src="script.js"></script>
+  <script src="slides.js"></script> 
+  <script src="darkmode.js"></script> 
+ 
+
+</body>
+</html>
