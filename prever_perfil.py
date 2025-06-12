@@ -7,7 +7,7 @@ import joblib
 import os
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://peachpuff-rook-575098.hostingersite.com"}})
+CORS(app, resources={r"/*": {"origins": "*"}})  # ← para testes
 
 # Caminhos dos arquivos
 modelo_path = "modelo_perfis.keras"
