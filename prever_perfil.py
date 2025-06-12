@@ -31,6 +31,10 @@ mapa_perfis = {
     "Frio e Montanha": "Frio e Montanha"
 }
 
+@app.route('/')
+def index():
+    return 'API GoVibe está online. Use /prever com método POST.'
+
 @app.route('/prever', methods=['POST'])
 def prever():
     dados = request.json
